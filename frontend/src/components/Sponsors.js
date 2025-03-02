@@ -55,7 +55,7 @@ const Sponsors = () => {
         <h2 className="section-title">Our Sponsors</h2>
         
         <p className="sponsors-intro" data-aos="fade-up">
-          We are grateful to our amazing sponsors who make TechHack 2025 possible.
+          We are grateful to our amazing sponsors who make Innoverse-HackFest 2025 possible.
           Their support enables us to create an incredible experience for all participants.
         </p>
         

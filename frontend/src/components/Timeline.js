@@ -8,7 +8,7 @@ const Timeline = () => {
       date: 'March 16, 2025',
       time: '9:00 PM',
       title: 'Registration Deadline',
-      description: 'Last date to register your team for TechHack 2025'
+      description: 'Last date to register your team for Innoverse-HackFest 2025'
     },
     {
       date: 'March 22, 2025',

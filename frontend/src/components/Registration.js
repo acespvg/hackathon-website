@@ -14,7 +14,7 @@ const Registration = () => {
         
         <div className="registration-container" data-aos="fade-up">
           <div className="registration-info">
-            <h3>Join TechHack 2025</h3>
+            <h3>Join Innoverse-HackFest 2025</h3>
             <p>
               Ready to showcase your skills and creativity? Register your team now 
               to participate in the most exciting hackathon of the year!
