@@ -5,8 +5,8 @@ import './Timeline.css';
 const Timeline = () => {
   const timelineEvents = [
     {
-      date: 'March 18, 2025',
-      time: '12:00 PM',
+      date: 'March 16, 2025',
+      time: '9:00 PM',
       title: 'Registration Deadline',
       description: 'Last date to register your team for TechHack 2025'
     },
@@ -54,7 +54,7 @@ const Timeline = () => {
     },
     {
       date: 'March 23, 2025',
-      time: '2:00 PM',
+      time: '1:00 PM',
       title: 'Awards Ceremony',
       description: 'Winners announcement and prize distribution'
     }
@@ -86,9 +86,9 @@ const Timeline = () => {
           ))}
         </div>
         
-        <div className="timeline-buttons" data-aos="fade-up">
+        {/* <div className="timeline-buttons" data-aos="fade-up">
           <a href="/rulebook.pdf" target="_blank" className="btn">Download Rulebook</a>
-        </div>
+        </div> */}
       </div>
     </section>
   );

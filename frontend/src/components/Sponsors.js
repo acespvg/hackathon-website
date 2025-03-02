@@ -1,39 +1,37 @@
 // components/Sponsors.js
 import React from 'react';
 import './Sponsors.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import img1 from'../images/logo_final.png';
+import sponsor1 from '../images/sponsor1.jpg';
+import sponsor2 from '../images/sponsor2.jpg';
+import sponsor3 from '../images/sponsor3.jpg';
+import sponsor4 from '../images/sponsor4.png';
 
 const Sponsors = () => {
   const sponsors = [
     {
-      name: 'TechCorp',
+      name: 'Budhani',
       tier: 'platinum',
-      logo: '/api/placeholder/200/100'
+      logo: sponsor1
     },
     {
-      name: 'CloudScale',
-      tier: 'gold',
-      logo: '/api/placeholder/200/100'
+      name: 'Pictel AI',
+      tier: 'platinum',
+      logo: sponsor2
     },
     {
-      name: 'DevConnect',
-      tier: 'gold',
-      logo: '/api/placeholder/200/100'
+      name: 'App World',
+      tier: 'platinum',
+      logo: sponsor3
     },
     {
-      name: 'InnovateLabs',
-      tier: 'silver',
-      logo: '/api/placeholder/200/100'
-    },
-    {
-      name: 'DataSystems',
-      tier: 'silver',
-      logo: '/api/placeholder/200/100'
-    },
-    {
-      name: 'CodeCraft',
-      tier: 'silver',
-      logo: '/api/placeholder/200/100'
+      name: 'Star Copiers',
+      tier: 'platinum',
+      logo: sponsor4
     }
+    
   ];
   
   // Group sponsors by tier
@@ -46,9 +44,9 @@ const Sponsors = () => {
   }, {});
   
   const tiers = [
-    { name: 'platinum', title: 'Platinum Sponsors' },
-    { name: 'gold', title: 'Gold Sponsors' },
-    { name: 'silver', title: 'Silver Sponsors' }
+    { name: 'platinum', title: 'Previous Sponsors' },
+    // { name: 'gold', title: 'Gold Sponsors' },
+    // { name: 'silver', title: 'Silver Sponsors' }
   ];
   
   return (
@@ -87,21 +85,20 @@ const Sponsors = () => {
         <div className="container">
           <div className="footer-content">
             <div className="footer-logo">
-              <h2>TechHack 2025</h2>
-              <p>Innovate. Build. Conquer.</p>
+              {/* <h2>TechHack 2025</h2> */}
+              <img src={img1} width={150} height={60}></img>
+              {/* <p>Innovate. Build. Conquer.</p> */}
             </div>
             <div className="footer-links">
               <a href="#home">Home</a>
               <a href="#prizes">Prizes</a>
               <a href="#timeline">Timeline</a>
-              <a href="#judges">Judges</a>
+              {/* <a href="#judges">Judges</a> */}
               <a href="#register">Register</a>
             </div>
             <div className="footer-social">
-              <a href="#"><i className="fa fa-facebook"></i></a>
-              <a href="#"><i className="fa fa-twitter"></i></a>
-              <a href="#"><i className="fa fa-instagram"></i></a>
-              <a href="#"><i className="fa fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/acespvg?igsh=YWUwM29zaWxndjdt"><FontAwesomeIcon icon={faInstagram} /></a>
+            <a href="https://www.linkedin.com/school/acespvg/"><FontAwesomeIcon icon={faLinkedin} /></a>
             </div>
           </div>
           <div className="footer-bottom">

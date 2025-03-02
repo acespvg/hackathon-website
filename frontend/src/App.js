@@ -34,7 +34,7 @@ function App() {
               <Hero />
               <PrizePool />
               <Timeline />
-              <Judges />
+              {/* <Judges /> */}
               <Registration />
               <Sponsors />
             </>

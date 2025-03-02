@@ -64,23 +64,23 @@ const PrizePool = () => {
         <div className="prize-distribution">
           <div className="prize-card" data-aos="fade-up" data-aos-delay="100">
             <div className="prize-position">1st</div>
-            <div className="prize-value">₹ 30,000</div>
+            <div className="prize-value">₹ 31,000</div>
           </div>
           
           <div className="prize-card" data-aos="fade-up" data-aos-delay="200">
             <div className="prize-position">2nd</div>
-            <div className="prize-value">₹ 20,000</div>
+            <div className="prize-value">₹ 21,000</div>
           </div>
           
           <div className="prize-card" data-aos="fade-up" data-aos-delay="300">
             <div className="prize-position">3rd</div>
-            <div className="prize-value">₹ 10,000</div>
+            <div className="prize-value">₹ 11,000</div>
           </div>
           
-          <div className="prize-card" data-aos="fade-up" data-aos-delay="400">
+          {/* <div className="prize-card" data-aos="fade-up" data-aos-delay="400">
             <div className="prize-position">Special</div>
             <div className="prize-value">₹ 3,000</div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

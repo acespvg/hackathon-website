@@ -34,16 +34,25 @@ const Registration = () => {
               </li>
               <li>
                 <i className="fa fa-check-circle"></i>
-                <span>Food and refreshments provided</span>
+                <span>Food ,refreshments and accomodation provided</span>
               </li>
               <li>
                 <i className="fa fa-check-circle"></i>
-                <span>Exciting prizes worth ₹63,000</span>
+                <span>Goodies & Certificates await</span> 
+              </li>
+              <li>
+                <i className="fa fa-check-circle"></i>
+                <span>Exciting prizes worth ₹63,000</span> 
+              </li>
+              <li>
+                <i className="fa fa-check-circle"></i>
+                <span><br/>For Queries Contact :-<br/><br/>⚪Dhanesh Sathe: 8855833583<br/>
+                ⚪Rohan Sonawane: 8805285479</span>
               </li>
             </ul>
             <div className="registration-deadline">
               <i className="fa fa-calendar-check-o"></i>
-              <span>Registration closes on March 18, 2025</span>
+              <span>Registration closes on March 16, 2025</span>
             </div>
           </div>
           

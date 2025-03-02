@@ -79,6 +79,11 @@ const teamSchema = new mongoose.Schema({
   },
   leader: participantSchema,
   teamMembers: [participantSchema],
+  projectDescription: {
+    type: String,
+    required: true,
+    trim: true
+  },
   paymentScreenshot: {
     type: String, // Base64 string for image
     default: ''
@@ -87,9 +92,9 @@ const teamSchema = new mongoose.Schema({
     type: Date,
     default: Date.now
   }
-}, { collection: 'Hackathon-2425' });
+});
 
 // Create models
 const Team = mongoose.model('Team', teamSchema);
 
-module.exports =  Team;
+module.exports =  Team;

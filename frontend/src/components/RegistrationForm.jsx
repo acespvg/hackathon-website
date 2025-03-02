@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './RegistrationForm.css';
-//const dotenv = require('dotenv');
+import QR_img from '../images/payment_QR.jpg';
 
 const formFields = [
   { name: 'firstName', label: 'First Name', type: 'text', required: true },
@@ -57,6 +57,10 @@ function RegistrationForm() {
     paymentScreenshot: null
   });
   const [paymentScreenshot, setPaymentScreenshot] = useState('');
+  // Added project description state
+  const [projectDescription, setProjectDescription] = useState('');
+  // Added character count state
+  const [charCount, setCharCount] = useState(0);
 
   // Convert file to base64
   const convertToBase64 = (file) => {
@@ -106,8 +110,37 @@ function RegistrationForm() {
       return false;
     }
 
+    // Validate project description
+    if (!projectDescription.trim()) {
+      setSubmitMessage({ type: 'error', text: 'Please provide a project description for the selection process.' });
+      return false;
+    }
+
+    if (projectDescription.split(/\s+/).length > 500) {
+      setSubmitMessage({ type: 'error', text: 'Project description exceeds 500 words. Please shorten your description.' });
+      return false;
+    }
+
     return true;
   };
+
+  // Handle project description change
+  // In your React component
+const handleDescriptionChange = (e) => {
+  const text = e.target.value;
+  setProjectDescription(text);
+  setCharCount(text.length);
+  
+  // Check if word count exceeds limit
+  const wordCount = text.trim() ? text.trim().split(/\s+/).length : 0;
+  const charCountElement = document.querySelector('.character-count');
+  
+  if (wordCount > 500 && charCountElement) {
+    charCountElement.classList.add('exceeded');
+  } else if (charCountElement) {
+    charCountElement.classList.remove('exceeded');
+  }
+};
 
   const handlePaymentScreenshotChange = async (e) => {
     const file = e.target.files[0];
@@ -258,8 +291,6 @@ function RegistrationForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // console.log(payload);
-
     if (!validateForm()) {
       return;
     }
@@ -271,16 +302,12 @@ function RegistrationForm() {
       leader: leaderData,
       teamMembers: teamMembersData,
       paymentScreenshot,
+      projectDescription, // Add project description to payload
       registrationStatus: 'pending'
     };
 
-    //const backen_url = process.env?.REACT_APP_BACKEND_URL
-
     try {
-      const backendUrl = process.env.REACT_APP_BACKEND_URL;
-      console.log('Backend URL:', backendUrl); // Add this line for debugging. Verify the URL is correct
-      const response = await fetch(backendUrl + '/api/register', {
-
+      const response = await fetch('http://localhost:5000/api/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
@@ -302,6 +329,8 @@ function RegistrationForm() {
       setLeaderData(initialFormData);
       setTeamMembersData([{ ...initialFormData }]);
       setPaymentScreenshot('');
+      setProjectDescription('');
+      setCharCount(0);
       setFilePreview({
         leader: null,
         members: Array(3).fill(null),
@@ -322,10 +351,6 @@ function RegistrationForm() {
 
   return (
     <div className="hackathon-registration-container">
-      {/* <Link to="/team-registration" className="registration-button">
-        Team Registration
-      </Link> */}
-      
       <header className="registration-header">
         <h1>Hackathon Team Registration</h1>
         <p>Register your team for the upcoming hackathon event!</p>
@@ -360,6 +385,43 @@ function RegistrationForm() {
               className="form-input"
               placeholder="Enter your team name"
             />
+          </div>
+        </div>
+        
+        {/* Project Description Section */}
+        <div className="form-section project-section">
+          <h2>Project Description<span className="required">*</span></h2>
+          <div className="selection-criteria">
+            <h3>Selection Criteria:</h3>
+            <p>In case of excessive registrations, an elimination round will be conducted. For that, kindly provide a solution for any problem statement from a domain of your choice, and make sure it fulfills the following criteria. Selection will be based on the description of your solution.</p>
+            <ul>
+              <li><strong>Clarity and Understanding</strong></li>
+              <li><strong>Feasibility of Solution</strong></li>
+              <li><strong>Innovation and Creativity</strong></li>
+              <li><strong>Technical Depth</strong> (how much you know about the technology required)</li>
+              <li><strong>Impact and Usefulness</strong> of the solution</li>
+              <li><strong>Scalability and Future Scope</strong></li>
+              <li><strong>Presentation and Structure</strong> of the Description</li>
+            </ul>
+            <p>Ensure the length of description stays under 500 words.</p>
+          </div>
+          <div className="form-group">
+            <label htmlFor="projectDescription">
+              Project Description:<span className="required">*</span>
+            </label>
+            <textarea
+              id="projectDescription"
+              name="projectDescription"
+              value={projectDescription}
+              onChange={handleDescriptionChange}
+              required
+              className="form-textarea"
+              placeholder="Describe your project idea and solution (max 500 words)"
+              rows={10}
+            ></textarea>
+            <div className="character-count">
+              Characters: {charCount} | Words: ~{projectDescription.trim() ? projectDescription.trim().split(/\s+/).length : 0}/500
+            </div>
           </div>
         </div>
         
@@ -422,7 +484,7 @@ function RegistrationForm() {
           <div className="payment-details">
             <div className="qr-code-container">
               <img 
-                src="./Images/QR Code.jpg" 
+                src={QR_img} 
                 alt="Payment QR Code" 
                 className="payment-qr-code" 
               />

@@ -8,7 +8,6 @@
   font-family: 'Poppins', sans-serif;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  margin-top: 100px;
 }
 
 .registration-header {
@@ -337,4 +336,80 @@ input[type="checkbox"] {
 .registration-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 217, 245, 0.3);
+}
+
+/* Project Description Section */
+.project-section {
+  border-left: 3px solid #f0db4f; /* Yellow accent color to distinguish this section */
+}
+
+.selection-criteria {
+  background-color: #1a2234;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.selection-criteria h3 {
+  color: #00f5a0;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.selection-criteria p {
+  margin-bottom: 15px;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.selection-criteria ul {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.selection-criteria li {
+  margin-bottom: 8px;
+  color: #cbd5e1;
+}
+
+.selection-criteria strong {
+  color: #00d9f5;
+}
+
+.form-textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  resize: vertical;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-textarea:focus {
+  border-color: #00d9f5;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 217, 245, 0.2);
+}
+
+.form-textarea::placeholder {
+  color: #64748b;
+}
+
+.character-count {
+  margin-top: 10px;
+  text-align: right;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+/* Styling for when character count exceeds limit */
+.character-count.exceeded {
+  color: #f43f5e;
+  font-weight: 500;
 }

@@ -2,14 +2,23 @@ const nodemailer = require('nodemailer');
 const Team = require('../models/HackathonRegistrationModel');
 
 // Registration endpoint
+// Registration endpoint
 const HackathonRegistration = async (req, res) => {
     try {
-        const { leader, teamMembers, teamSize, teamName, paymentScreenshot } = req.body;
+        const { leader, teamMembers, teamSize, teamName, paymentScreenshot, projectDescription } = req.body;
 
         // Validate required fields
-        if (!leader || !teamMembers || !teamSize || !teamName || !paymentScreenshot) {
+        if (!leader || !teamMembers || !teamSize || !teamName || !paymentScreenshot || !projectDescription) {
             return res.status(400).json({
-                message: 'Missing required information. Please ensure all fields including payment are filled.'
+                message: 'Missing required information. Please ensure all fields including payment and project description are filled.'
+            });
+        }
+
+        // Validate project description word count
+        const wordCount = projectDescription.trim().split(/\s+/).length;
+        if (wordCount > 500) {
+            return res.status(400).json({
+                message: 'Project description exceeds 500 words limit. Please shorten your description.'
             });
         }
 
@@ -27,6 +36,7 @@ const HackathonRegistration = async (req, res) => {
             teamName,
             leader,
             teamMembers,
+            projectDescription,
             paymentScreenshot,
             registrationStatus: 'pending'
         });
@@ -34,7 +44,7 @@ const HackathonRegistration = async (req, res) => {
         const savedTeam = await team.save();
 
         // Send confirmation email with WhatsApp link
-        await sendWhatsAppLink(leader.email, leader, teamMembers, teamName, teamSize);
+        await sendWhatsAppLink(leader.email, leader, teamMembers, teamName, teamSize, projectDescription);
 
         res.status(201).json({
             message: 'Team registered successfully. Your registration is pending verification.',
@@ -127,7 +137,7 @@ const sendWhatsAppLink = async (email, leader, teamMembers, teamName, teamSize) 
         };
 
         await transporter.sendMail(mailOptions);
-        console.log(`Confirmation email sent to ${email}`);
+        console.log('Confirmation email sent to ${email}');
 
     } catch (error) {
         console.error('Error sending email:', error);
@@ -135,4 +145,4 @@ const sendWhatsAppLink = async (email, leader, teamMembers, teamName, teamSize) 
 };
 
 
-module.exports = HackathonRegistration;
+module.exports =  HackathonRegistration ;

@@ -44,7 +44,7 @@ const Header = () => {
               <li><a href="#home" onClick={closeMenu}>Home</a></li>
               <li><a href="#prizes" onClick={closeMenu}>Prizes</a></li>
               <li><a href="#timeline" onClick={closeMenu}>Timeline</a></li>
-              <li><a href="#judges" onClick={closeMenu}>Judges</a></li>
+              {/* <li><a href="#judges" onClick={closeMenu}>Judges</a></li> */}
               <li><a href="#register" onClick={closeMenu}>Register</a></li>
             </ul>
           </nav>

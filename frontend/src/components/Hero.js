@@ -1,7 +1,7 @@
 // components/Hero.js
 import React, { useEffect } from 'react';
 import './Hero.css';
-
+import img1 from'../images/logo_final.png';
 const Hero = () => {
   useEffect(() => {
     // Create animated background elements
@@ -24,7 +24,8 @@ const Hero = () => {
       <div className="animated-bg"></div>
       <div className="container hero-container">
         <div className="hero-content" data-aos="fade-up">
-          <h1>Innoverse-HackFest 2025</h1>
+          {/* <h1>Innoverse-HackFest 2025</h1> */}
+          <img src={img1} width={250} height={120}></img>
           <h2>Innovate. Build. Conquer.</h2>
           <p>Join us for an exhilarating 24-hour hackathon experience where innovation meets technology.</p>
           
@@ -64,7 +65,7 @@ const Hero = () => {
           
           <div className="hero-buttons">
             <a href="#register" className="btn register-btn" data-aos="fade-up" data-aos-delay="500">Register Now</a>
-            <a href="/rulebook.pdf" target="_blank" className="btn outline-btn" data-aos="fade-up" data-aos-delay="600">Rulebook</a>
+            {/* <a href="/rulebook.pdf" target="_blank" className="btn outline-btn" data-aos="fade-up" data-aos-delay="600">Rulebook</a> */}
           </div>
         </div>
       </div>
