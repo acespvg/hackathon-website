@@ -1,22 +1,25 @@
 services:
   backend:
     container_name: backend
-    image: coooolkpk/aces-website-backend:v1.3
+    image: coooolkpk/aces-website-backend:v1.4
     expose:
       - 5000
     #ports:
-    #  - "5000:5000"
-    env_file:
-      - ~/aces-website/backend/Server/.env
+    #  - "5000:5000"    
+    environment:
+      - PORT=5000
+      - MONGODB_URI=mongodb+srv://aces:ACES2425@cluster0.t8xti.mongodb.net/
+      - EMAIL_USER=
+      - EMAIL_PASS=
     networks:
       - aces-network
   frontend:
     container_name: frontend
-    image: coooolkpk/aces-website-frontend:v1.4
+    image: coooolkpk/aces-website-frontend:v1.5
     ports:
-      - "80:80"
-    env_file:
-      - ~/aces-website/frontend/.env
+      - "9081:80"
+#    environment:
+#      - REACT_APP_BACKEND_URL=https://innoverse.acespvgcoet.in
     depends_on:
       - backend
     networks:
