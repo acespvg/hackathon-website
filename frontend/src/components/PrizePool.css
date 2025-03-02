@@ -1,0 +1,96 @@
+/* PrizePool.css */
+.prize-pool {
+    background-color: #080e2a;
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0;
+  }
+  
+  .prize-counter {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .prize-amount {
+    font-size: 72px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #7f54ff, #3e97ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+  }
+  
+  .rupee-symbol {
+    font-size: 60px;
+    vertical-align: top;
+    margin-right: 10px;
+  }
+  
+  .prize-counter p {
+    font-size: 18px;
+    color: #ccc;
+  }
+  
+  .prize-distribution {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .prize-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 30px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+  }
+  
+  .prize-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .prize-position {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .prize-position::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(to right, #7f54ff, #3e97ff);
+  }
+  
+  .prize-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+  }
+  
+  .prize-card:first-child .prize-position {
+    color: gold;
+  }
+  
+  .prize-card:nth-child(2) .prize-position {
+    color: silver;
+  }
+  
+  .prize-card:nth-child(3) .prize-position {
+    color: #cd7f32; /* bronze */
+  }

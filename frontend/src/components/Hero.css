@@ -1,0 +1,111 @@
+/* Hero.css */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #060c22fa;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(31, 38, 103, 0.4) 0%, rgba(6, 12, 34, 0.9) 100%);
+  }
+  
+  .hero-container {
+    position: relative;
+    z-index: 10;
+  }
+  
+  .hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .hero-content h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #7f54ff, #3e97ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .hero-content h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+  
+  .event-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .detail-item {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 45%;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+  }
+  
+  .detail-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .detail-item i {
+    font-size: 24px;
+    margin-right: 15px;
+    color: #7f54ff;
+  }
+  
+  .detail-item h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .detail-item p {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .outline-btn {
+    background: transparent;
+    border: 2px solid #7f54ff;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .outline-btn:hover {
+    background: linear-gradient(to right, #7f54ff, #3e97ff);
+    border-color: transparent;
+  }

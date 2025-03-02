@@ -1,0 +1,29 @@
+services:
+  backend:
+    container_name: backend
+    image: coooolkpk/aces-website-backend:v1.3
+    expose:
+      - 5000
+    #ports:
+    #  - "5000:5000"
+    env_file:
+      - ~/aces-website/backend/Server/.env
+    networks:
+      - aces-network
+  frontend:
+    container_name: frontend
+    image: coooolkpk/aces-website-frontend:v1.4
+    ports:
+      - "80:80"
+    env_file:
+      - ~/aces-website/frontend/.env
+    depends_on:
+      - backend
+    networks:
+      - aces-network
+networks:
+  aces-network:
+    driver: bridge
+
+#      - backend
+#      - frontend
