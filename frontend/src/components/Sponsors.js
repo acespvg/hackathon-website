@@ -77,7 +77,7 @@ const Sponsors = () => {
         <div className="sponsors-cta" data-aos="fade-up">
           <h3>Interested in Sponsoring?</h3>
           <p>Join our growing list of sponsors and connect with top tech talent.</p>
-          <a href="mailto:sponsors@techhack2025.com" className="btn">Become a Sponsor</a>
+          <a href="mailto:aces@pvgcoet.ac.in" className="btn">Become a Sponsor</a>
         </div>
       </div>
       
