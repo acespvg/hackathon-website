@@ -50,8 +50,12 @@ const Registration = () => {
                 ⚪Rohan Sonawane: 8805285479</span>
               </li>
             </ul>
+            <div className="hackathon-problem-statement">
+              {/* <i className="fa fa-calendar-check-o"></i> */}
+              <span>The main problem statements will be announced 16 hours before the hackathon begins.</span>
+            </div>
             <div className="registration-deadline">
-              <i className="fa fa-calendar-check-o"></i>
+              {/* <i className="fa fa-calendar-check-o"></i> */}
               <span>Registration closes on March 16, 2025</span>
             </div>
           </div>

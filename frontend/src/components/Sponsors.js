@@ -8,6 +8,11 @@ import sponsor1 from '../images/sponsor1.jpg';
 import sponsor2 from '../images/sponsor2.jpg';
 import sponsor3 from '../images/sponsor3.jpg';
 import sponsor4 from '../images/sponsor4.png';
+import sponsor5 from '../images/sponsor5.jpg';
+import sponsor6 from '../images/sponsor6.jpg';
+import sponsor7 from '../images/sponsor7.jpg';
+import sponsor8 from '../images/sponsor8.jpg';
+
 
 const Sponsors = () => {
   const sponsors = [
@@ -30,8 +35,27 @@ const Sponsors = () => {
       name: 'Star Copiers',
       tier: 'platinum',
       logo: sponsor4
+    },
+    {
+      name: 'RECKONING ESPORTS',
+      tier: 'platinum',
+      logo: sponsor5
+    },
+    {
+      name: 'RECKONING ESPORTS',
+      tier: 'platinum',
+      logo: sponsor6
+    },
+    {
+      name: 'RECKONING ESPORTS',
+      tier: 'platinum',
+      logo: sponsor7
+    },
+    {
+      name: 'RECKONING ESPORTS',
+      tier: 'platinum',
+      logo: sponsor8
     }
-    
   ];
   
   // Group sponsors by tier

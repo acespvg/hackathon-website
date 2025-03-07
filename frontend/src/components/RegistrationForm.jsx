@@ -21,8 +21,12 @@ const formFields = [
     required: true 
   },
   { name: 'instituteName', label: 'Institute Name', type: 'text', required: true },
-  { name: 'type', label: 'Participant Type', type: 'text', required: true },
-  { name: 'course', label: 'Course', type: 'text', required: true },
+  { name: 'type', label: 'Participant Type', type: 'select',
+    options: [
+      {value: '', label: 'Select Participant Type'},
+      {value: 'student', label: 'Student'}
+    ],
+    required: true },  { name: 'course', label: 'Course', type: 'text', required: true },
   { name: 'courseSpecialization', label: 'Course Specialization', type: 'text', required: true },
   { name: 'graduationYear', label: 'Graduation Year', type: 'number', required: true },
   { name: 'isAcesMember', label: 'Are you an ACES Member?', type: 'checkbox', required: false },
@@ -403,6 +407,9 @@ const handleDescriptionChange = (e) => {
               <li><strong>Scalability and Future Scope</strong></li>
               <li><strong>Presentation and Structure</strong> of the Description</li>
             </ul>
+            <p><strong>Note: </strong>The first round is purely for screening purposes. We are looking for your thought process and creativity in submitting an idea. This submission will solely be used for screening purposes in round 1. <br />
+            Please note that your main problem statement for the hackathon will be different and will be provided by us 16 hours before the hackathon.</p>
+            <p><strong>If you are not selected for Round 2, your amount will be fully refunded.</strong></p>
             <p>Ensure the length of description stays under 500 words.</p>
           </div>
           <div className="form-group">

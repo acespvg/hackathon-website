@@ -53,6 +53,16 @@
     margin-right: 10px;
     font-size: 18px;
   }
+
+  .hackathon-problem-statement {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: rgba(127, 84, 255, 0.1);
+    border-radius: 5px;
+    border-left: 3px solid #7f54ff;
+    margin-bottom: 5px;
+  }
   
   .registration-deadline {
     display: flex;

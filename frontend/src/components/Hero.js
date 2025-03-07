@@ -25,7 +25,7 @@ const Hero = () => {
       <div className="container hero-container">
         <div className="hero-content" data-aos="fade-up">
           {/* <h1>Innoverse-HackFest 2025</h1> */}
-          <img src={img1} width={250} height={120}></img>
+          <img src={img1} width={300} height={100}></img>
           <h2>Innovate. Build. Conquer.</h2>
           <p>Join us for an exhilarating 24-hour hackathon experience where innovation meets technology.</p>
           
