@@ -325,7 +325,7 @@ const handleDescriptionChange = (e) => {
       const result = await response.json();
       setSubmitMessage({
         type: 'success',
-        text: 'Team registration successful! Your registration is pending verification. You will receive a confirmation email shortly.'
+        text: 'Team registration successful! We will reach out to you shortly regarding the confirmation details!'
       });
 
       // Reset form

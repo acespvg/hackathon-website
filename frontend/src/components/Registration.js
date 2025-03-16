@@ -56,7 +56,7 @@ const Registration = () => {
             </div>
             <div className="registration-deadline">
               {/* <i className="fa fa-calendar-check-o"></i> */}
-              <span>Registration closes on March 16, 2025</span>
+              <span>Registration closes on March 18, 2025</span>
             </div>
           </div>
           

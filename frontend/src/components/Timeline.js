@@ -5,7 +5,7 @@ import './Timeline.css';
 const Timeline = () => {
   const timelineEvents = [
     {
-      date: 'March 16, 2025',
+      date: 'March 18, 2025',
       time: '9:00 PM',
       title: 'Registration Deadline',
       description: 'Last date to register your team for Innoverse-HackFest 2025'
