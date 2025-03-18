@@ -63,13 +63,16 @@ const Registration = () => {
           <div className="registration-form-container">
             
               
-              <button 
+              {/* <button 
                 type="submit" 
                 className="btn register-submit-btn" 
                 onClick={()=>navigate("/register")}
               >
                 Register Now
-              </button>
+              </button> */}
+
+              <button
+                className="btn register-submit-btn"> Registration Closed </button>
             
           </div>
         </div>
