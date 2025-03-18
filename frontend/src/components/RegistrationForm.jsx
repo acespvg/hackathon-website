@@ -292,63 +292,72 @@ const handleDescriptionChange = (e) => {
     }
   };
 
+  // const handleSubmit = async (event) => {
+  //   event.preventDefault();
+
+  //   if (!validateForm()) {
+  //     return;
+  //   }
+
+  //   setIsSubmitting(true);
+  //   const payload = {
+  //     teamName,
+  //     teamSize,
+  //     leader: leaderData,
+  //     teamMembers: teamMembersData,
+  //     paymentScreenshot,
+  //     projectDescription, // Add project description to payload
+  //     registrationStatus: 'pending'
+  //   };
+
+  //   try {
+  //     const response = await fetch(process.env.REACT_APP_BACKEND_URL + "/api/register",{
+  //       method: 'POST',
+  //       headers: { 'Content-Type': 'application/json' },
+  //       body: JSON.stringify(payload)
+  //     });
+
+  //     if (!response.ok) {
+  //       const errorData = await response.json();
+  //       throw new Error(errorData.message || 'Registration failed');
+  //     }
+
+  //     const result = await response.json();
+  //     setSubmitMessage({
+  //       type: 'success',
+  //       text: 'Registration Closed!!!'
+  //     });
+
+  //     // Reset form
+  //     setTeamName('');
+  //     setLeaderData(initialFormData);
+  //     setTeamMembersData([{ ...initialFormData }]);
+  //     setPaymentScreenshot('');
+  //     setProjectDescription('');
+  //     setCharCount(0);
+  //     setFilePreview({
+  //       leader: null,
+  //       members: Array(3).fill(null),
+  //       paymentScreenshot: null
+  //     });
+  //   } catch (error) {
+  //     setSubmitMessage({
+  //       type: 'error',
+  //       text: error.message || 'There was an error submitting your registration. Please try again.'
+  //     });
+  //   } finally {
+  //     setIsSubmitting(false);
+  //     window.scrollTo(0, 0);
+  //   }
+  // };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
-
-    if (!validateForm()) {
-      return;
-    }
-
-    setIsSubmitting(true);
-    const payload = {
-      teamName,
-      teamSize,
-      leader: leaderData,
-      teamMembers: teamMembersData,
-      paymentScreenshot,
-      projectDescription, // Add project description to payload
-      registrationStatus: 'pending'
-    };
-
-    try {
-      const response = await fetch(process.env.REACT_APP_BACKEND_URL + "/api/register",{
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || 'Registration failed');
-      }
-
-      const result = await response.json();
-      setSubmitMessage({
-        type: 'success',
-        text: 'Team registration successful! We will reach out to you shortly regarding the confirmation details!'
-      });
-
-      // Reset form
-      setTeamName('');
-      setLeaderData(initialFormData);
-      setTeamMembersData([{ ...initialFormData }]);
-      setPaymentScreenshot('');
-      setProjectDescription('');
-      setCharCount(0);
-      setFilePreview({
-        leader: null,
-        members: Array(3).fill(null),
-        paymentScreenshot: null
-      });
-    } catch (error) {
-      setSubmitMessage({
-        type: 'error',
-        text: error.message || 'There was an error submitting your registration. Please try again.'
-      });
-    } finally {
-      setIsSubmitting(false);
-      window.scrollTo(0, 0);
-    }
+    setSubmitMessage({
+      type: 'info',
+      text: 'Registration Closed! Thank you for your interest.'
+    });
+    window.scrollTo(0, 0);
   };
 
   const showReceipt = (data) => data.isAcesMember;
