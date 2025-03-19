@@ -425,8 +425,8 @@ section {
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  background: linear-gradient(to right, #00C9FF, #92FE9D);
-  color: #000;
+  background: linear-gradient(to right, #7f54ff, #3e97ff);
+  color: white;
   border: none;
   border-radius: 8px;
   font-size: 14px;

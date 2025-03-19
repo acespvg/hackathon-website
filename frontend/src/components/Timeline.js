@@ -37,7 +37,7 @@ const Timeline = () => {
     {
       date: 'March 22, 2025',
       time: '4:00 PM',
-      title: 'Coffee Break',
+      title: 'Tea Break',
       description: ''
     },
     {
@@ -49,7 +49,7 @@ const Timeline = () => {
     {
       date: 'March 23, 2025',
       time: '11:00 AM',
-      title: 'Presentations',
+      title: 'Evaluation Round',
       description: 'Teams present their projects to judges'
     },
     {
