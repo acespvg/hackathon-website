@@ -12,8 +12,8 @@ const Timeline = () => {
     },
     {
       date: 'March 22, 2025',
-      time: '9:00 AM',
-      title: 'Check-in & Setup',
+      time: '8:30 AM',
+      title: 'Team Reporting',
       description: 'Team check-in and setting up workstations'
     },
     {
@@ -24,21 +24,21 @@ const Timeline = () => {
     },
     {
       date: 'March 22, 2025',
-      time: '1:00 PM',
-      title: 'First Mentor Session',
+      time: '12:00 PM',
+      title: 'Lunch Break',
+      description: 'Lunch break will be for 2 hours (12:00-2:00)'
+    },
+    {
+      date: 'March 22, 2025',
+      time: '2:30 PM',
+      title: 'Mentor Talk',
       description: 'Get guidance from industry experts'
     },
     {
       date: 'March 22, 2025',
-      time: '8:00 PM',
-      title: 'Mid-way Checkpoint',
-      description: 'Progress check and networking dinner'
-    },
-    {
-      date: 'March 23, 2025',
-      time: '9:00 AM',
-      title: 'Final Mentor Session',
-      description: 'Last chance to get expert advice'
+      time: '4:00 PM',
+      title: 'Coffee Break',
+      description: ''
     },
     {
       date: 'March 23, 2025',
