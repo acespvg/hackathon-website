@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #0a1929;
+  color: #f0f0f0;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  border-bottom: 1px solid #1e3a5f;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+header p {
+  color: #a0c0e0;
+  font-size: 1.1rem;
+}
+
+.problem-statements {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ps-card {
+  background-color: #0f2742;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #1e3a5f;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.ps-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  border-color: #2e6da4;
+}
+
+.ps-card.expanded {
+  background-color: #142f50;
+}
+
+.ps-header {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.ps-header h2 {
+  background-color: #1e3a5f;
+  color: #4facfe;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin-right: 1rem;
+  min-width: 70px;
+  text-align: center;
+}
+
+.ps-header h3 {
+  flex: 1;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.expand-icon {
+  font-size: 1.5rem;
+  color: #4facfe;
+  font-weight: bold;
+  margin-left: 1rem;
+  min-width: 24px;
+  text-align: center;
+}
+
+.ps-description {
+  padding: 0 1.5rem 1.5rem;
+  border-top: 1px solid #1e3a5f;
+  margin-top: 0.5rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.ps-description p {
+  color: #c0d0e0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 2rem 0;
+  color: #6080a0;
+  font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 1rem;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  .ps-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .ps-header h2 {
+    margin-bottom: 0.8rem;
+    margin-right: 0;
+  }
+  
+  .expand-icon {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+}

@@ -12,6 +12,11 @@ import sponsor5 from '../images/sponsor5.jpg';
 import sponsor6 from '../images/sponsor6.jpg';
 import sponsor7 from '../images/sponsor7.jpg';
 import sponsor8 from '../images/sponsor8.jpg';
+import ITPRENEUR from '../images/ITPRENEUR.png';
+import ELITE from '../images/ELITE.jpg';
+import Pragati from '../images/Pragati.jpg';
+import Inoplexus from '../images/INNOPLEXUS.png';
+import unknown from '../images/unknown.jpg';
 
 
 const Sponsors = () => {
@@ -55,7 +60,46 @@ const Sponsors = () => {
       name: 'RECKONING ESPORTS',
       tier: 'platinum',
       logo: sponsor8
-    }
+    },
+    {
+      name: 'Pictel AI',
+      tier: 'gold',
+      logo: sponsor2
+    },
+    {
+      name: 'Star Copiers',
+      tier: 'gold',
+      logo: sponsor4
+    },
+    {
+      name: 'ITPreneur',
+      tier: 'gold',
+      logo: ITPRENEUR
+    },
+    {
+      name: 'Elite',
+      tier: 'gold',
+      logo: ELITE
+    },
+    {
+      name: 'Elite',
+      tier: 'gold',
+      logo: Pragati
+    },
+    {
+      name: 'Inoplexus',
+      tier: 'gold',
+      logo: Inoplexus
+    },
+    {
+      name: 'UNknown',
+      tier: 'gold',
+      logo: unknown
+    },
+
+    
+
+
   ];
   
   // Group sponsors by tier
@@ -68,8 +112,9 @@ const Sponsors = () => {
   }, {});
   
   const tiers = [
-    { name: 'platinum', title: 'Previous Sponsors' },
-    // { name: 'gold', title: 'Gold Sponsors' },
+    
+    { name: 'gold', title: 'Current Sponsors' },
+    { name: 'platinum', title: 'Previous Sponsors' }
     // { name: 'silver', title: 'Silver Sponsors' }
   ];
   

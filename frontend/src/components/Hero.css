@@ -110,3 +110,16 @@
     background: linear-gradient(to right, #7f54ff, #3e97ff);
     border-color: transparent;
   }
+
+
+  .register-btn:hover {
+    background: transparent;
+    border: 2px solid #7f54ff;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .register-btn {
+    background: linear-gradient(to right, #7f54ff, #3e97ff);
+    border-color: transparent;
+  }

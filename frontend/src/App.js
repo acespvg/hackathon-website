@@ -10,6 +10,7 @@ import Registration from "./components/Registration";
 import Sponsors from "./components/Sponsors";
 import RegistrationForm from "./components/RegistrationForm"; // Registration page
 import Winners from "./components/Winners";
+import Problem_Statement from "./components/Problem_Statement";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -37,7 +38,7 @@ function App() {
 
   return (
     <Router>
-      {/* Main Popup */}
+      {/* Main Popup
        {showPopup && (
         <div className="popup-overlay">
           <div className="popup-content announcement-popup">
@@ -66,7 +67,7 @@ function App() {
         </div>
       )}
 
-      {/* Winners Modal */}
+      Winners Modal
       {activeModal === "winners" && (
   <div className="popup-overlay modal-overlay">
     <div className="popup-content modal-content">
@@ -92,7 +93,9 @@ function App() {
       </div>
     </div>
   </div>
-)}
+)} */}
+
+
 
       <Routes>
         {/* Homepage Components */}
@@ -113,6 +116,7 @@ function App() {
         
         {/* Registration Page */}
         <Route path="/register" element={<RegistrationForm />} />
+        <Route path="/problem_statement" element={<Problem_Statement/>} />
       </Routes>
     </Router>
   );
