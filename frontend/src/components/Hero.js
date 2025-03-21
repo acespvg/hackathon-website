@@ -50,7 +50,7 @@ const Hero = () => {
               <i className="fa fa-map-marker"></i>
               <div>
                 <h3>Venue</h3>
-                <p>PVG COET</p>
+                <p>PVG COET GKP(W)IOM</p>
               </div>
             </div>
             

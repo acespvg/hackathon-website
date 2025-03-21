@@ -5,60 +5,72 @@ import './Timeline.css';
 const Timeline = () => {
   const timelineEvents = [
     {
-      date: 'March 18, 2025',
-      time: '9:00 PM',
-      title: 'Registration Deadline',
-      description: 'Last date to register your team for Innoverse-HackFest 2025'
+      "date": "March 22, 2025",
+      "time": "8:30 AM",
+      "title": "Team Reporting",
+      "description": "Team check-in and setting up workstations"
     },
     {
-      date: 'March 22, 2025',
-      time: '8:30 AM',
-      title: 'Team Reporting',
-      description: 'Team check-in and setting up workstations'
+      "date": "March 22, 2025",
+      "time": "10:00 AM",
+      "title": "Hackathon Begins",
+      "description": "Inauguration & 24-hour Hackathon starts"
     },
     {
-      date: 'March 22, 2025',
-      time: '10:00 AM',
-      title: 'Hackathon Begins',
-      description: 'Opening ceremony and theme announcement'
+      "date": "March 22, 2025",
+      "time": "12:00 PM",
+      "title": "Lunch Break",
+      "description": "Lunch will be provided"
     },
     {
-      date: 'March 22, 2025',
-      time: '12:00 PM',
-      title: 'Lunch Break',
-      description: 'Lunch break will be for 2 hours (12:00-2:00)'
+      "date": "March 22, 2025",
+      "time": "2:30 PM",
+      "title": "Mentor Talk",
+      "description": "Get guidance from industry experts"
     },
     {
-      date: 'March 22, 2025',
-      time: '2:30 PM',
-      title: 'Mentor Talk',
-      description: 'Get guidance from industry experts'
+      "date": "March 22, 2025",
+      "time": "4:00 PM",
+      "title": "Tea Break",
+      "description": "A short break for relaxation"
     },
     {
-      date: 'March 22, 2025',
-      time: '4:00 PM',
-      title: 'Tea Break',
-      description: ''
+      "date": "March 22, 2025",
+      "time": "7:00 PM",
+      "title": "Dinner Break & Recreational Activities",
+      "description": "Have a networking dinner"
     },
     {
-      date: 'March 23, 2025',
-      time: '10:00 AM',
-      title: 'Hackathon Ends',
-      description: 'Submission deadline'
+      "date": "March 23, 2025",
+      "time": "1:00 AM",
+      "title": "Tea Break",
+      "description": "Another short break for relaxation"
     },
     {
-      date: 'March 23, 2025',
-      time: '11:00 AM',
-      title: 'Evaluation Round',
-      description: 'Teams present their projects to judges'
+      "date": "March 23, 2025",
+      "time": "8:00 AM - 10:00 AM",
+      "title": "Final Evaluation",
+      "description": "Last chance to get expert advice"
     },
     {
-      date: 'March 23, 2025',
-      time: '1:00 PM',
-      title: 'Awards Ceremony',
-      description: 'Winners announcement and prize distribution'
-    }
-  ];
+      "date": "March 23, 2025",
+      "time": "10:00 AM",
+      "title": "Hackathon Ends & Breakfast",
+      "description": "Submission deadline"
+    },
+    {
+      "date": "March 23, 2025",
+      "time": "10:00 AM - 12:00 PM",
+      "title": "Final Presentations",
+      "description": "Teams present their projects to judges"
+    },
+    {
+      "date": "March 23, 2025",
+      "time": "12:30 PM",
+      "title": "Prize Distribution",
+      "description": "Winners announcement and prize distribution"
+    }
+];
 
   return (
     <section id="timeline" className="timeline-section">
