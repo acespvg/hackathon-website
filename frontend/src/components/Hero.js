@@ -67,6 +67,7 @@ const Hero = () => {
             <a href="/shortlisted_teams.pdf" target = "_blank" className="btn register-btn" data-aos="fade-up" data-aos-delay="500">Shortlisted Teams</a>
             <a href="/rulebook.pdf" target="_blank" className="btn register-btn" data-aos="fade-up" data-aos-delay="500">Rulebook</a>
             <a href="/problem_statement" target = "_blank" className="btn register-btn" data-aos="fade-up" data-aos-delay="200">Problem Statements</a>
+            <a href="/JudgingCriteria.pdf" target="_blank" className="btn register-btn" data-aos="fade-up" data-aos-delay="500">Judging Criteria</a>
 
           </div>
         </div>
