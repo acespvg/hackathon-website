@@ -49,26 +49,44 @@ const Timeline = () => {
     {
       "date": "March 23, 2025",
       "time": "8:00 AM - 10:00 AM",
-      "title": "Final Evaluation",
-      "description": "Last chance to get expert advice"
+      "title": "Final Touches & Breakfast",
+      "description": "Last minute adjustments before judging round"
     },
     {
       "date": "March 23, 2025",
-      "time": "10:00 AM",
-      "title": "Hackathon Ends & Breakfast",
-      "description": "Submission deadline"
+      "time": "10:00 AM - 11:30 AM",
+      "title": "First Evaluation Round",
+      "description": "First Assessment Round of Teams"
     },
     {
       "date": "March 23, 2025",
-      "time": "10:00 AM - 12:00 PM",
-      "title": "Final Presentations",
-      "description": "Teams present their projects to judges"
+      "time": "11:45 AM",
+      "title": "Result Declaration of round 1",
+      "description": "Announcement of round 1 selected teams"
     },
     {
       "date": "March 23, 2025",
-      "time": "12:30 PM",
+      "time": "11:45 - 12:00 PM",
+      "title": "Certificate & Goodies Distribution",
+      "description": "For eliminated teams, certificates and goodies will be distributed."
+    },
+    {
+      "date": "March 23, 2025",
+      "time": "12:00 - 12:30 PM",
+      "title": "Lunch",
+      "description": "Lunch for teams selected for final round"
+    },
+    {
+      "date": "March 23, 2025",
+      "time": "12:30 - 2:00 PM",
+      "title": "Final Evaluation Round",
+      "description": "Participant presentations and judgment assessments."
+    },
+    {
+      "date": "March 23, 2025",
+      "time": "2:15 - 3:30 PM",
       "title": "Prize Distribution",
-      "description": "Winners announcement and prize distribution"
+      "description": "Recognition and awarding of winners."
     }
 ];
 
