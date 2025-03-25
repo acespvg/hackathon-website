@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Results.css';
 
 const Results = () => {
-  const [activeSection, setActiveSection] = useState('results');
+  const [activeSection, setActiveSection] = useState('final-results');
 
   const judgingCriteria = [
     { 
@@ -338,7 +338,7 @@ const Results = () => {
     },
     {
         "teamName": "Tech titans",
-        "leader": "Harshad Jogdande"
+        "leader": "Yash Ambodekar"
     },
     {
         "teamName": "Team Rocket",
@@ -363,6 +363,10 @@ const Results = () => {
     {
         "teamName": "Techies",
         "leader": "Sankalp Chakre"
+    },
+    {
+        "teamName": "Ignite",
+        "leader": "Shreya Patil"
     }
 ];
 
@@ -469,12 +473,23 @@ const Results = () => {
             <button 
               key={index}
               className={activeSection === section.toLowerCase().replace(' ', '-') ? 'active' : ''}
-              onClick={() => setActiveSection(section.toLowerCase().replace(' ', '-'))}
+              onClick={() => {
+                if (section === 'Results') {
+                  window.open('/First Round Marksheet.pdf', '_blank'); // Open PDF in new tab
+                }
+                if (section === 'Shortlisted Teams') {
+                  window.open('/Innoverse Round 1 Shotlist.pdf', '_blank'); // Open PDF in new tab
+                }
+                else {
+                  setActiveSection(section.toLowerCase().replace(' ', '-'));
+                }
+              }}
             >
               {section}
             </button>
           ))}
         </nav>
+
       </header>
 
       <main className="results-content">

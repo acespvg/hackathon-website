@@ -83,16 +83,18 @@ body {
   text-align: center;
 }
 
-/* Shortlisted Teams Table */
+/* /* Shortlisted Teams Table */
 .shortlisted-teams table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   margin-top: 1rem;
   background-color: var(--navy-blue-light);
   border-radius: 8px;
   overflow: hidden;
 }
 
+/* Table Headers */
 .shortlisted-teams th {
   background-color: var(--navy-blue-dark);
   color: white;
@@ -101,31 +103,105 @@ body {
   border-bottom: 2px solid var(--primary-color);
 }
 
+/* Table Cells */
 .shortlisted-teams td {
   padding: 10px;
   border-bottom: 1px solid var(--border-color);
 }
 
+/* Column Styling */
 .rank-column {
-  font-weight: bold;
-  text-align: center;
   width: 10%;
+  text-align: center;
 }
 
 .team-name-column {
+  width: 45%;
   font-weight: 600;
   text-transform: capitalize;
 }
 
 .team-leader-column {
+  width: 45%;
   color: var(--text-gray);
   font-style: italic;
 }
 
+/* Row Hover Effect */
 .shortlisted-teams tbody tr:hover {
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color 0.3s ease;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .shortlisted-teams table {
+    border-spacing: 0;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+  .shortlisted-teams table,
+  .shortlisted-teams tbody,
+  .shortlisted-teams tr,
+  .shortlisted-teams td {
+    display: block;
+    width: 100%;
+  }
+
+  .shortlisted-teams thead {
+    display: none;
+  }
+
+  .shortlisted-teams tr {
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--navy-blue-light);
+    padding: 10px;
+    position: relative;
+  }
+
+  .shortlisted-teams td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+  }
+
+  .shortlisted-teams td:last-child {
+    border-bottom: none;
+  }
+
+  .shortlisted-teams td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+
+  /* Ensure text doesn't overflow */
+  .shortlisted-teams td span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 60%;
+    margin-left: auto;
+  }
+}
+
+/* Accessibility and Readability Improvements */
+@media (max-width: 480px) {
+  .shortlisted-teams {
+    font-size: 14px;
+  }
+}
+
 
 /* Judging Criteria */
 .criteria-list {
