@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --navy-blue-dark: #0a1f3f;
+  --navy-blue-medium: #123456;
+  --navy-blue-light: #1e3a5f;
+  --accent-blue: #4a90e2;
+  --text-light: #e0e6ed;
+  --text-muted: #8fa2b3;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --primary-color: #4a90e2;
+  --text-gray: #8fa2b3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--navy-blue-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.hackathon-results-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+}
+
+.results-header {
+  background-color: var(--navy-blue-medium);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.results-header h1 {
+  color: var(--accent-blue);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.results-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.results-nav button {
+  background-color: var(--navy-blue-light);
+  color: var(--text-light);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.results-nav button.active,
+.results-nav button:hover {
+  background-color: var(--accent-blue);
+}
+
+.results-content {
+  background-color: var(--navy-blue-medium);
+  border-radius: 10px;
+  padding: 2rem;
+  min-height: 500px;
+}
+
+.results-content h2 {
+  color: var(--accent-blue);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Shortlisted Teams Table */
+.shortlisted-teams table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: var(--navy-blue-light);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.shortlisted-teams th {
+  background-color: var(--navy-blue-dark);
+  color: white;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.shortlisted-teams td {
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.rank-column {
+  font-weight: bold;
+  text-align: center;
+  width: 10%;
+}
+
+.team-name-column {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.team-leader-column {
+  color: var(--text-gray);
+  font-style: italic;
+}
+
+.shortlisted-teams tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+/* Judging Criteria */
+.criteria-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.criteria-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--navy-blue-light);
+  padding: 0.75rem;
+  border-radius: 6px;
+}
+
+.criteria-percentage {
+  color: var(--accent-blue);
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.judge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.judge-card {
+  background-color: var(--navy-blue-light);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.judge-card h4 {
+  color: var(--accent-blue);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.judge-card ul {
+  list-style-type: none;
+}
+
+.judge-card li {
+  padding: 0.25rem 0;
+  border-bottom: 1px solid var(--navy-blue-medium);
+}
+
+/* Results Table */
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.results-table th, 
+.results-table td {
+  border: 1px solid var(--navy-blue-light);
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.results-table thead {
+  background-color: var(--navy-blue-light);
+  color: var(--accent-blue);
+}
+
+/* Final Results Podium */
+.podium {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.podium-position {
+  background-color: var(--navy-blue-dark);
+  width: 300px;
+  height: 250px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 0px 15px var(--navy-blue-light);
+  transition: box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.podium-position:hover {
+  box-shadow: 0px 0px 20px var(--navy-blue-light);
+}
+
+.podium-position h3 {
+  color: var(--accent-blue);
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.podium-position p {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.prize-amount1 {
+  background-color: var(--navy-blue-dark);
+  color: var(--accent-blue);
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Criteria Table */
+.criteria-table {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.criteria-header,
+.criteria-row {
+  display: flex;
+  background-color: var(--navy-blue-light);
+  padding: 0.75rem;
+}
+
+.criteria-header {
+  font-weight: bold;
+  color: var(--accent-blue);
+}
+
+.criteria-row {
+  background-color: var(--navy-blue-medium);
+  border-bottom: 1px solid var(--navy-blue-light);
+}
+
+.criteria-name {
+  flex: 3;
+}
+
+.criteria-score {
+  flex: 1;
+  text-align: right;
+}
+
+.criteria-total {
+  display: flex;
+  background-color: var(--navy-blue-light);
+  padding: 0.75rem;
+  font-weight: bold;
+}
+
+.results-table-container {
+  overflow-x: auto;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.results-table th,
+.results-table td {
+  border: 1px solid var(--navy-blue-light);
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.criteria-tooltip {
+  cursor: help;
+}
+
+.criteria-legend {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.legend-item {
+  background-color: var(--navy-blue-light);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+/* Judge Rankings Section */
+.judge-rankings {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: var(--navy-blue-light);
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.judge-section {
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: var(--navy-blue-dark);
+  border-radius: 8px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.judge-section h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.judge-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.judge-table th {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.judge-table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  font-size: 1rem;
+}
+
+.judge-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.judge-section p {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-gray);
+  font-style: italic;
+  padding: 10px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hackathon-results-container {
+    padding: 1rem;
+  }
+
+  .results-header {
+    padding: 1rem;
+  }
+
+  .results-header h1 {
+    font-size: 2rem;
+  }
+
+  .results-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .results-nav button {
+    width: 100%;
+  }
+
+  .podium {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .podium-position {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .judge-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .results-table,
+  .shortlisted-teams table {
+    min-width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .criteria-row,
+  .criteria-header {
+    flex-direction: column;
+  }
+
+  .criteria-name,
+  .criteria-score {
+    text-align: left;
+    margin-bottom: 0.25rem;
+  }
+
+  .criteria-legend {
+    flex-direction: column;
+  }
+
+  .judge-table {
+    font-size: 0.9rem;
+  }
+
+  .judge-table th,
+  .judge-table td {
+    padding: 8px;
+  }
+}

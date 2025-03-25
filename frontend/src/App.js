@@ -13,6 +13,7 @@ import Winners from "./components/Winners";
 import Problem_Statement from "./components/Problem_Statement";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Results from "./components/Results";
 
 const handleDownload = () => {
   const filePath = "/shortlisted_teams.pdf";
@@ -117,6 +118,7 @@ function App() {
         {/* Registration Page */}
         <Route path="/register" element={<RegistrationForm />} />
         <Route path="/problem_statement" element={<Problem_Statement/>} />
+        <Route path="/result" element={<Results/>} />
       </Routes>
     </Router>
   );
