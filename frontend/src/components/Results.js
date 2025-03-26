@@ -640,6 +640,8 @@ const Results = () => {
         {activeSection === 'final-results' && (
           <section className="final-results">
             <h2>Final Results</h2>
+
+            {/* Podium Display */}
             <div className="podium">
               {finalResults.map((result, index) => (
                 <div key={index} className={`podium-position position-${result.rank}`}>
@@ -649,8 +651,16 @@ const Results = () => {
                 </div>
               ))}
             </div>
+
+            {/* PDF View Button */}
+            <div className="pdf-container">
+              <a href="/Final Round Evaluation.pdf" target="_blank" rel="noopener noreferrer" className="pdf-button">
+                📄 View Final Rankings (PDF)
+              </a>
+            </div>
           </section>
         )}
+
       </main>
 
       <footer className="results-footer">
